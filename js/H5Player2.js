@@ -213,7 +213,7 @@ h5p.prototype = {
             if (audio.ended) {
                 number++;
 
-                if(number==uoNumber){
+                if(number==upNumber){
                     number=0;
                 }
 
