@@ -229,16 +229,17 @@ h5p.prototype = {
 
         nextB.onclick = function () {
             number++;
-            if(number>upNumber){
-                return false;
-            }
+            //TODO
+            /*if(number==upNumber){
+                number=0;
+            }*/
             //模拟点击歌单事件
             songList.childNodes[number].onclick(number);
         };
         prevB.onclick = function () {
             number--;
-            if(bumber<0){
-                return false;
+            if(number<0){
+                number=0;
             }
             //模拟点击歌单事件
             songList.childNodes[number].onclick(number);
