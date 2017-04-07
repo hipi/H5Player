@@ -229,7 +229,7 @@ h5p.prototype = {
 
         nextB.onclick = function () {
             number++;
-            if(number>uoNumber){
+            if(number>upNumber){
                 return false;
             }
             //模拟点击歌单事件
