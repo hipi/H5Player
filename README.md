@@ -13,6 +13,7 @@
 第三个参数是歌单的json文件
 
 歌单文件参数如下
+`
 [
   {
     "artist": "CrossGear",
@@ -20,15 +21,9 @@
     "url": "2.mp3",
     "duration": 60000,
     "image": "1.jpg"
-  },{
-    "artist": "好妹妹乐队",
-    "name": "西窗的雨",
-    "url": "http://m2.music.126.net/w4Z4hg2rAwbyGaM1MmOUGg==/3254554424352624.mp3",
-    "duration": 239520,
-    "image": "http://p3.music.126.net/sFdqiMORMdsLk0nbD0KTlg==/3305131955540608.jpg?param=130y130"
   }
-  ]
-
+]
+`
 
 后续会加入歌词导入
 artist：艺术家名称
