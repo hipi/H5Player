@@ -2,11 +2,11 @@
 注：本代码用了ES6的语法 ，低版本浏览器不适用，尽量用chrome浏览器
 用法 在html 用id定义一个DIV   例子可进入 http://chenyeah.cn/demo-dev/p1/player/
 
-例如<div id="Player"></div> id名可以随意取
+例如`<div id="Player"></div>` id名可以随意取
 
 导入js文件和font-awesome css文件
 
-接下来只要在script标签内 new一个函数 new h5p("normal", "Player", "songs.json");
+接下来只要在script标签内 new一个函数 `new h5p("normal", "Player", "songs.json");`
 
 第一参数normal 不变 以后会增添其他
 第二参数是上面取得id名
