@@ -25,12 +25,12 @@
 ]
 `
 
-后续会加入歌词导入
-artist：艺术家名称
-name：歌曲名
-url：歌曲地址
-duration：歌曲时间 （ms为单位）
-image：专辑图片地址
+
+`artist：//艺术家名称`\n
+`name：//歌曲名`
+`url：//歌曲地址`
+`duration：//歌曲时间 （ms为单位）`
+`image：//专辑图片地址`
 
 
 
