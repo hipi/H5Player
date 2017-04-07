@@ -89,7 +89,7 @@ h5p.prototype = {
                     div.appendChild(textN);
                     document.querySelector('.h5p-playlist').appendChild(div);
                 });
-
+                
                 /*默认显示歌单第一首歌*/
                 document.querySelector('.h5p-title').innerHTML = data[0].name;
                 document.querySelector('.h5p-image').getElementsByTagName("img")[0].src = data[0].image;
@@ -107,15 +107,16 @@ h5p.prototype = {
                 document.querySelector('.h5p-time').innerHTML = "00:00/" + fenF + ":" + miaoF;
 
                 var number = 0;
+                var upNumber=data.length+1;
                 var lrcObj = {}; //定义歌词
 
-                this.event(data, audio, number, lrcObj);
+                this.event(data, audio, number,upNumber,lrcObj);
 
             })
             .catch(e => console.log("请求错误", e))
     },
     /*事件*/
-    event: function (data, audio, number, lrcObj) {
+    event: function (data, audio, number,upNumber, lrcObj) {
         var listB = document.querySelector('[data-id="list"]');
         var songList = document.querySelector('.h5p-playlist');
         /*显示隐藏歌单*/
@@ -212,17 +213,9 @@ h5p.prototype = {
             if (audio.ended) {
                 number++;
 
-                /*
-                console.log(data[number]);
-                document.querySelector('.h5p-title').innerHTML = data[number].name;
-                document.querySelector('.h5p-artist').innerHTML = data[number].artist;
-                document.querySelector('.h5p-image').getElementsByTagName("img")[0].src = data[number].image;
-                document.querySelector('.h5p-image').className = "h5p-image h5p-roll";
-                audio.pause();
-                audio.src = data[number].url;
-                audio.play();
-                return number;
-                */
+                if(number==uoNumber){
+                    number=0;
+                }
 
                 //模拟点击歌单事件
                 songList.childNodes[number].onclick(number);
@@ -236,11 +229,17 @@ h5p.prototype = {
 
         nextB.onclick = function () {
             number++;
+            if(number>uoNumber){
+                return false;
+            }
             //模拟点击歌单事件
             songList.childNodes[number].onclick(number);
         };
         prevB.onclick = function () {
             number--;
+            if(bumber<0){
+                return false;
+            }
             //模拟点击歌单事件
             songList.childNodes[number].onclick(number);
         };
