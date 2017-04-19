@@ -3,7 +3,6 @@ function h5p(model, dom, url) {
     this.model = model;
     this.dom = eval("document.getElementById('" + dom + "')");
     this.url = url;
-
     this.judge();
 
 };
