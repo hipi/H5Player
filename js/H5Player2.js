@@ -4,7 +4,6 @@ function h5p(model, dom, url) {
     this.dom = eval("document.getElementById('" + dom + "')");
     this.url = url;
     this.judge();
-
 };
 h5p.prototype = {
     judge: function () {
@@ -16,9 +15,7 @@ h5p.prototype = {
         if (this.model == "simple") {
             this.simple();
         }
-
     },
-
     normal: function () {
         this.dom.innerHTML = `
 				<div class="h5p h5p-normal">
@@ -51,7 +48,6 @@ h5p.prototype = {
 			</div>
 		
 		`; //导入html代码结束
-
         /*导入样式*/
         (function (doc, cssText) {
             var styleEl = doc.createElement("style");
@@ -68,7 +64,6 @@ h5p.prototype = {
                 }
             }
         }(document, ".h5p-normal{font-family:Microsoft YaHei;user-select:none;border-radius:10px;min-width:314px;max-width:414px;font-size:16px;background:#fff;box-shadow:0 0 10px grey;position:relative}@keyframes h5p-roll{from{transform:rotate(0)}to{transform:rotate(360deg)}}.h5p-normal .h5p-image{position:absolute;width:130px;height:130px;left:10px;top:10px;animation:h5p-roll 8s linear infinite;-webkit-animation-play-state:paused;animation-play-state:paused}.h5p-normal .h5p-image img{border-radius:50%;width:100%;height:100%}.h5p-normal .h5p-roll{-webkit-animation-play-state: running;animation-play-state: running}.h5p-normal .h5p-buttons{position:absolute;top:10px;right:10px;font-size:20px}.h5p-normal .h5p-info{padding:30px 10px 0 150px;text-align:center;height:32px}.h5p-normal .h5p-info .h5p-title{font-weight:bold}.h5p-normal .h5p-info .h5p-artist{font-size:10px;color:#5f5b5b}.h5p-normal .h5p-control{padding:0 10px 30px 150px;text-align:center}.h5p-normal .h5p-control .h5p-button{margin:10px;font-size:30px}.h5p-button:hover{color: #1e90ff;}.h5p-normal .h5p-progress{padding:5px 10px}.h5p-normal .h5p-wrap{position:relative;padding:4px 0}.h5p-bar{height:2px;background:#c0c0c0;position:relative}.h5p-played{position:absolute;top:0;height:2px;background:#a52a2a}.h5p-normal .h5p-cursor{cursor:pointer;position:absolute;box-sizing:border-box;border:1px solid #c0c0c0;background:#fff;border-radius:50%;width:10px;height:10px;top:0;margin-left:-5px}.h5p-normal .h5p-time{font-size:10px;position:absolute;right:0;top:-20px}.h5p-normal .h5p-lyric{text-align:center;color:brown;font-size:12px;height:24px}.h5p-normal .h5p-lyric{text-align:center;color:brown;font-size:12px;height:24px}.h5p-playlist{max-height:200px;border-top:1px dashed gray;padding:0.5em 1em;overflow-y:auto}.h5p-playlist>div{color:#1a1a1a;cursor:pointer;white-space:nowrap;}.h5p-playlist>div:hover{color:orange;font-weight:bold;}"));
-
     }, // normal函数结束标志
 
     getForm: function () {
