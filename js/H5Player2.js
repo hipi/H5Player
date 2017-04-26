@@ -17,6 +17,7 @@ h5p.prototype = {
         }
     },
     normal: function () {
+//      TODO 这地方有问题
         this.dom.innerHTML = `
 				<div class="h5p h5p-normal">
 				<div class="h5p-image">
@@ -266,13 +267,11 @@ h5p.prototype = {
             if (miaoD < 10) {
                 miaoD = "0" + miaoD;
             }
-
             document.querySelector('.h5p-time').innerHTML = fenD + ":" + miaoD + "/" + fen + ":" + miao;
-
             if (number > data.length) {
                 return number = -1;
             }
         }, 1000);
     } //event事件结束标志
 
-} //原型对象结束
+} 
