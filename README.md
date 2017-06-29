@@ -1,5 +1,5 @@
-﻿
-注：本代码用了ES6的语法 ，低版本浏览器不适用，尽量用chrome浏览器
+#以后会更新代码
+#注：本代码用了ES6的语法 ，低版本浏览器不适用，尽量用chrome浏览器
 用法 在html 用id定义一个DIV   例子可进入 http://chenyeah.cn/dev/p1/player/
 
 例如`<div id="Player"></div>` id名可以随意取
