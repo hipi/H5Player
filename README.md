@@ -24,8 +24,10 @@
   }
 ]
 ```
-`artist：//艺术家名称`<br />
-`name：//歌曲名`<br />
-`url：//歌曲地址`<br />
-`duration：//歌曲时间 （ms为单位）`<br />
-`image：//专辑图片地址`<br />
+```js
+artist：//艺术家名称
+name：//歌曲名
+url：//歌曲地址
+duration：//歌曲时间 （ms为单位）
+image：//专辑图片地址
+```
